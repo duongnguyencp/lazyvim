@@ -39,7 +39,13 @@ return {
       table.insert(opts.sources, { name = "emoji" })
     end,
   },
-
+  {
+    "numToStr/Comment.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("Comment").setup()
+    end,
+  },
   -- change some telescope options and a keymap to browse plugin files
   {
     "nvim-telescope/telescope.nvim",
