@@ -12,6 +12,12 @@ return {
             vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
           end,
         },
+        ["rust-analyzer"] = {
+          cargo = { allFeatures = true },
+          checkOnSave = {
+            command = "clippy",
+          },
+        },
       })
     end,
   },

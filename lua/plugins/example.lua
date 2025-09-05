@@ -124,6 +124,7 @@ return {
         "yaml",
         "vue",
         "scss",
+        "rust",
       },
     },
   },
