@@ -75,8 +75,22 @@ return {
       },
     },
   },
-
-  -- add pyright to lspconfig
+  {
+    "nvim-tree/nvim-tree.nvim",
+    opts = {
+      filters = {
+        dotfiles = false,
+      },
+    },
+  },
+  {
+    "stevearc/oil.nvim",
+    opts = {
+      view_options = {
+        show_hidden = true, -- Hiện file ẩn
+      },
+    },
+  },
   {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
@@ -167,6 +181,22 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+      },
+    },
+  },
+  "folke/snacks.nvim",
+  opts = {
+    explorer = {
+      show_hidden = true, -- Hiện dotfiles (file/folder bắt đầu bằng ".")
+      show_ignored = true, -- Có hiện file bị ignore bởi .gitignore không
+    },
+    picker = {
+      sources = {
+        files = {
+          hidden = true, -- hiện dotfiles
+          follow = true, -- theo symlink
+          ignored = false, -- hiện cả file bị ignore
+        },
       },
     },
   },

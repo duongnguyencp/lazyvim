@@ -6,3 +6,6 @@ vim.o.mouse = "a"
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.clipboard = "unnamedplus"
+
+vim.g.netrw_list_hide = nil
+vim.g.netrw_hide = 0
